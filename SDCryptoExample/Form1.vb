@@ -5,7 +5,7 @@
         Dim key As String = TextBox1.Text
         Dim cipherText As String = TextBox2.Text
         
-        If (key.Length > 0 Or cipherText.Length > 0) Then
+        If (key.Length > 0 And cipherText.Length > 0) Then
             TextBox3.Text = sdCrypto.DecryptDataAES(cipherText, key)
         Else
             MessageBox.Show("Key or ciphertext cannot be empty.")
@@ -16,7 +16,7 @@
         Dim key As String = TextBox6.Text
         Dim plainText As String = TextBox5.Text
         
-        If (key.Length > 0 Or plainText.Length > 0) Then
+        If (key.Length > 0 And plainText.Length > 0) Then
             TextBox4.Text = sdCrypto.EncryptDataAES(plainText, key)
         End If
     End Sub
